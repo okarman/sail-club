@@ -2,6 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Яхт клуб</title>
   </head>
   <!--
@@ -47,7 +51,7 @@
           Почему внутри ссылки тег img, ведь перед нами иконка? Когда пользователь залогинен, то эта заглушка заменяется аватаркой, то есть фотографией самого пользователя. А это уже содержательное изображение. Поэтому и заглушку аватарки мы тоже разметили тегом img, чтобы сделать код единообразным для состояния "не залогинен" и "залогинен".
         -->
         <a class="signin" href="#">
-          <img src="img/icon.svg" alt="Кабинет пользователя">
+          <img src="img/icon.svg" width="16" height="18" alt="Кабинет пользователя">
         </a>
       </nav>
     </header>
@@ -60,7 +64,7 @@
         <!--
           Мы предположили, что это фотография реального судна этого клуба, поэтому разметили тегом img. Но вариант, когда это просто декоративный фон, тоже рабочий.
         -->
-        <img src="img/main photo.jpg" alt="Парусное судно на закате">
+        <!-- <img src="img/main photo.jpg" width="1170" height="466" alt="Парусное судно на закате"> -->
       </section>
       <!--
         Этот элемент — анос мероприятия или статьи, который можно вынести в другое место сайта и анонс всё равно не потеряет смысл. Поэтому тег article полностью подходит. Можно ли было использовать section? Да. Граница между article и section достаточно зыбкая.
@@ -84,13 +88,13 @@
 
           Обычно, картинки в мероприятиях/новостях несут важную информацию. И лучше сразу размечать их тегом img.
         -->
-        <img class="blog-article-img" src="img/article photo 1.jpg" alt="Мужчина на яхте смотрит в бинокль">
+        <img class="blog-article-img" src="img/article photo 1.jpg" width="600" height="262" alt="Мужчина на яхте смотрит в бинокль">
       </article>
       <article class="blog-article">
         <p><time datetime="2021-07-16">16 июля</time> - <time datetime="2021-07-23">23 июля</time></p>
         <h2>Рожденные в воде</h2>
         <p>Подарите детям настоящее приключение! День с морскими пиратами на корабле – это лучшая команда, веселые аниматоры, игры, соревнования, работа в команде и, конечно, море!</p>
-        <img class="blog-article-img" src="img/article photo 2.jpg" alt="Дети и взрослые на яхте">
+        <img class="blog-article-img" src="img/article photo 2.jpg" width="600" height="252" alt="Дети и взрослые на яхте">
       </article>
       <section class="contacts">
         <h2>Контакты</h2>
@@ -120,17 +124,17 @@
             <ul class="social-list">
               <li class="social-item">
                 <a href="#">
-                  <img src="img/facebook.svg" alt="Facebook">
+                  <img src="img/facebook.svg"  width="9" height="16" alt="Facebook">
                 </a>
               </li>
               <li class="social-item">
                 <a href="#">
-                  <img src="img/twitter.svg" alt="Twitter">
+                  <img src="img/twitter.svg" width="18 " height="16" alt="Twitter">
                 </a>
               </li>
               <li class="social-item">
                 <a href="#">
-                  <img src="img/instagram.svg" alt="Instagram">
+                  <img src="img/instagram.svg" width="18" height="18" alt="Instagram">
                 </a>
               </li>
             </ul>
@@ -139,7 +143,7 @@
         <!--
           Схемы проезда или схемы с адресами важны для клиента, поэтому их лучше всегда размечать изображениями.
         -->
-        <img class="contacts-img" src="img/map.png" alt="Карта с адресом яхт клуба">
+        <img class="contacts-img" src="img/map.png"  width="670" height="351" alt="Карта с адресом яхт клуба">
       </section>
     </main>
     <footer class="main-footer">
