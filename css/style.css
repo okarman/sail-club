@@ -1,32 +1,14 @@
 body {
-  margin: 0 auto;
-  padding: 0;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
-  background-color: #fdfdff;
   color: #163152;
-}
-
-.hero {
-  width: 1170px;
-  height: 566px;
-  background-image: url("/../img/main photo.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.site-navigation {
-  list-style: none;
+  background-color: #fdfdff;
 }
 
 .site-navigation-item a {
   font-size: 14px;
   line-height: 18px;
-
   text-transform: uppercase;
   color: #163152;
   text-decoration: none;
@@ -34,71 +16,79 @@ body {
 
 .hero h1 {
   font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 44px;
   line-height: 60px;
-
   text-transform: uppercase;
 }
 
-.hero h2,
 .blog-article h2 {
-  display: inline-block;
-  font-weight: 700;
   font-size: 24px;
   line-height: 34px;
-
-  border-bottom: 2px solid #00c6bd;
+  text-decoration: underline;
+  text-decoration-color: #00c6bd;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 15px;
+  text-underline-position: under;
 }
 
-time {
-  font-weight: 400;
+.blog-article-date {
   font-size: 14px;
   line-height: 18px;
-
   text-transform: uppercase;
+}
+
+.contacts h2 {
+  font-size: 24px;
+  line-height: 34px;
+  text-decoration: underline;
+  text-decoration-color: #00c6bd;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 15px;
+  text-underline-position: under;
+}
+
+.contact-item {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contact-item h3 {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .contact-item address {
   font-style: normal;
-  line-height: 22px;
 }
 
-/* .contact-items,
-.social-list {
-  list-style: none;
-} */
-
 .contact-item a {
-  line-height: 22px;
-
-  text-transform: lowercase;
   color: #163152;
   text-decoration: none;
+}
+
+.main-footer {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.footer-navigation-topics {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .footer-navigation-topic h2 {
-  font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-
   text-transform: uppercase;
 }
 
-.footer-navigation-topics,
-.footer-navigation {
-  list-style: none;
-}
-
-.main-footer a {
+.footer-navigation-item a {
   color: #163152;
   text-decoration: none;
 }
 
-.policy,
-.copyright {
-  font-size: 10px;
-  line-height: 12px;
-
+.policy a {
   color: #163152;
+  text-decoration: none;
 }
