@@ -120,6 +120,47 @@ body {
   margin-bottom: 120px;
 }
 
+.gallery h2 {
+  margin-top: 0;
+  margin-bottom: 55px;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #00c6bd;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 15px;
+  text-underline-position: under;
+}
+
+.gallery {
+  margin-bottom: 120px;
+}
+
+.gallery-wrapper {
+  display: flex;
+}
+
+.gallery-prewiev {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 170px;
+}
+
+.active-img {
+  width: 970px;
+  margin-right: 30px;
+}
+
+.prewiev-item {
+  margin-bottom: 30px;
+}
+
+.prewiev-item:last-child {
+  margin-bottom: 0;
+}
+
 .news h2 {
   margin: 0;
   margin-bottom: 55px;
