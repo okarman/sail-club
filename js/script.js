@@ -6,6 +6,18 @@ let articleSections = document.querySelectorAll('.blog-article.short');
 let cardViewButtonGrid = document.querySelector('.card-view-button-grid');
 let cardViewButtonList = document.querySelector('.card-view-button-list');
 let cards = document.querySelector('.cards');
+let previewList = document.querySelectorAll('.preview-list a');
+let mainImage = document.querySelector('.active-photo');
+
+for (let activeImage of previewList) {
+    activeImage.onclick = function (evt) {
+        evt.preventDefault();
+        mainImage.src = activeImage.href;
+        let currentActive = document.querySelector('.active-item');
+        currentActive.classList.remove('active-item');
+        activeImage.classList.add('active-item');
+    }
+}
 
 lightThemeButton.onclick = function () {
     document.body.classList.remove('dark');
