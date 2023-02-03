@@ -51,13 +51,13 @@ for (let articleSection of articleSections) {
 }
 
 cardViewButtonGrid.onclick = function () {
-    cards.classList.add('list');
+    cards.classList.remove('list');
     cardViewButtonGrid.classList.add('active');
     cardViewButtonList.classList.remove('active');
 }
 
 cardViewButtonList.onclick = function () {
-    cards.classList.remove('list');
+    cards.classList.add('list');
     cardViewButtonList.classList.add('active');
     cardViewButtonGrid.classList.remove('active');
 }
