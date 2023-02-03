@@ -1,63 +1,84 @@
-let darkThemeButton = document.querySelector('.theme-button-dark');
-let lightThemeButton = document.querySelector('.theme-button-light');
-let serifFontButton = document.querySelector('.font-button-serif');
-let sansSerifFontButton = document.querySelector('.font-button-sans-serif');
-let articleSections = document.querySelectorAll('.blog-article.short');
-let cardViewButtonGrid = document.querySelector('.card-view-button-grid');
-let cardViewButtonList = document.querySelector('.card-view-button-list');
-let cards = document.querySelector('.cards');
-let previewList = document.querySelectorAll('.preview-list a');
-let mainImage = document.querySelector('.active-photo');
+/* Переключение темы */
 
-for (let activeImage of previewList) {
-    activeImage.onclick = function (evt) {
-        evt.preventDefault();
-        mainImage.src = activeImage.href;
-        let currentActive = document.querySelector('.active-item');
-        currentActive.classList.remove('active-item');
-        activeImage.classList.add('active-item');
-    }
-}
+let lightThemeButton = document.querySelector(".theme-button-light");
+let darkThemeButton = document.querySelector(".theme-button-dark");
 
 lightThemeButton.onclick = function () {
-    document.body.classList.remove('dark');
-    lightThemeButton.classList.add('active');
-    darkThemeButton.classList.remove('active');
+  lightThemeButton.classList.add("active");
+  darkThemeButton.classList.remove("active");
+  document.body.classList.remove("dark");
 }
 
 darkThemeButton.onclick = function () {
-    document.body.classList.add('dark');
-    darkThemeButton.classList.add('active');
-    lightThemeButton.classList.remove('active');
+  darkThemeButton.classList.add("active");
+  lightThemeButton.classList.remove("active");
+  document.body.classList.add("dark");
 }
 
-serifFontButton.onclick = function () {
-    document.body.classList.add('serif');
-    serifFontButton.classList.add('active');
-    sansSerifFontButton.classList.remove('active');
+/* Переключение шрифта */
+
+let sansSerifButton = document.querySelector(".font-button-sans-serif");
+let serifButton = document.querySelector(".font-button-serif");
+
+sansSerifButton.onclick = function () {
+  sansSerifButton.classList.add("active");
+  serifButton.classList.remove("active");
+  document.body.classList.remove("serif");
 }
 
-sansSerifFontButton.onclick = function () {
-    document.body.classList.remove('serif');
-    sansSerifFontButton.classList.add('active');
-    serifFontButton.classList.remove('active');
+serifButton.onclick = function () {
+  serifButton.classList.add("active");
+  sansSerifButton.classList.remove("active");
+  document.body.classList.add("serif");
 }
 
-for (let articleSection of articleSections) {
-    let moreButton = articleSection.querySelector('.more');
-    moreButton.onclick = function () {
-        articleSection.classList.remove('short');
-    }
+
+// --- задание про сокращенную/полную информацию ---
+
+// соберем в коллекцию все статьи
+let blogArticles = document.querySelectorAll(".blog-article");
+// переберем коллекцию в цикле
+for (let blogArticle of blogArticles) {
+  // для каждой статьи найдем кнопку
+  let moreButton = blogArticle.querySelector(".more");
+  // добавляем обрабочик клика на кнопку
+  moreButton.onclick = function (evt) {
+    // переключаем класс на элементе
+    blogArticle.classList.remove("short");
+  };
 }
 
-cardViewButtonGrid.onclick = function () {
-    cards.classList.remove('list');
-    cardViewButtonGrid.classList.add('active');
-    cardViewButtonList.classList.remove('active');
+
+/* Переключение раскладки карточек */
+
+let gridButton = document.querySelector(".card-view-button-grid");
+let listButton = document.querySelector(".card-view-button-list");
+let cardsList = document.querySelector(".cards");
+
+gridButton.onclick = function () {
+  cardsList.classList.remove("list");
+  gridButton.classList.add("active");
+  listButton.classList.remove("active");
 }
 
-cardViewButtonList.onclick = function () {
-    cards.classList.add('list');
-    cardViewButtonList.classList.add('active');
-    cardViewButtonGrid.classList.remove('active');
+listButton.onclick = function () {
+  cardsList.classList.add("list");
+  listButton.classList.add("active");
+  gridButton.classList.remove("active");
+}
+
+// --- галерея ---
+let activePhoto = document.querySelector(".active-photo");
+let previews = document.querySelectorAll(".preview-list a");
+
+for (let preview of previews) {
+  preview.onclick = function (evt) {
+    evt.preventDefault();
+
+    let currentActive = document.querySelector(".preview-list .active-item");
+    currentActive.classList.remove("active-item");
+    preview.classList.add("active-item");
+
+    activePhoto.src = preview.href;
+  };
 }
